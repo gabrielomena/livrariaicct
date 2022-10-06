@@ -6,7 +6,7 @@
 ![Badge](https://img.shields.io/badge/Version-1.0.0-%23542F61?style=for-the-badge&logo=appveyor)
 ![Badge](https://img.shields.io/badge/Laravel-v8.54-%233570B2?style=for-the-badge&logo=laravel)
 ![Badge](https://img.shields.io/badge/PHP-v^7.4-%2300B98E?style=for-the-badge&logo=php)
-![Badge](https://img.shields.io/badge/VUE-v3-%2300B98E?style=for-the-badge&logo=vue)
+![Badge](https://img.shields.io/badge/VUE-v3-%2300B98E?style=for-the-badge&logo=Vue.js)
 
 ## 🎯 Desafio proposto:
 
