@@ -6,7 +6,7 @@
 ![Badge](https://img.shields.io/badge/Version-1.0.0-%23542F61?style=for-the-badge&logo=appveyor)
 ![Badge](https://img.shields.io/badge/Laravel-v8.54-%233570B2?style=for-the-badge&logo=laravel)
 ![Badge](https://img.shields.io/badge/PHP-v^7.4-%2300B98E?style=for-the-badge&logo=php)
-![Badge](https://img.shields.io/badge/Vue-v2-%2300B98E?style=for-the-badge&logo=appveyor)
+![Badge](https://img.shields.io/badge/VUE-v3-%2300B98E?style=for-the-badge&logo=vue)
 
 ## 🎯 Desafio proposto:
 
@@ -85,7 +85,8 @@ php artisan key:generate
 ```bash
 php artisan migrate
 ```
-
+## CASO PREFIRA PODE ACESSAR O SISTEMA EM PRODUÇÃO EM:
+[CLIQUE AQUI PARA VISUALIZAR EM PRODUÇÃO](https://livraria.gabrielomena.com.br)
 ## ✅ Features Desenvolvidas
 
 -   [x] API RESTful
