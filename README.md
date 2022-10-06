@@ -1,64 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div align="center">
+	<img src="https://media-exp1.licdn.com/dms/image/C4D1BAQGyYp1uEBpF6w/company-background_10000/0/1649255107825?e=1665630000&v=beta&t=434MnUC2rV2T5yaDwDcCmDDGPVg2671YSgN1FRtJcu8" with="600"/>
+	<h1>ICCT - Desafio FullStack</h1>
+</div>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Badge](https://img.shields.io/badge/Version-1.0.0-%23542F61?style=for-the-badge&logo=appveyor)
+![Badge](https://img.shields.io/badge/Laravel-v8.54-%233570B2?style=for-the-badge&logo=laravel)
+![Badge](https://img.shields.io/badge/PHP-v^7.4-%2300B98E?style=for-the-badge&logo=php)
+![Badge](https://img.shields.io/badge/Vue-v2-%2300B98E?style=for-the-badge&logo=appveyor)
 
-## About Laravel
+## 🎯 Desafio proposto:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dada a API (https://bibliapp.herokuapp.com/explorer) desenvolver um cliente WEB em arquitetura
+RESTfull para uma livraria virtual onde deve ser possível:
+· Listar os produtos disponíveis para a venda (vitrine)
+· Cadastrar novo livro
+· Editar um livro cadastrado
+· Excluir um livro
+Todos os campos são de preenchimento obrigatório.
+A API deve ter pelo menos um endpoint para realizar todas as operações em um recurso chamado
+“livro”.
+Além disso, a telas consultas devem atender aos seguintes requisitos:
+· Busca
+· Ordenação
+· Paginação
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠 Ferramentas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   [Laravel](https://laravel.com/docs/8.x)
+-   [Insominia](https://insomnia.rest)
+-   [Import configuração de requisições](requisicoes.json)
 
-## Learning Laravel
+## 📦 Requisitos para rodar o sistema
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   [PHP 7.4 ou superior](https://www.php.net/downloads)
+    -   PHP7.4-curl
+    -   PHP7.4-xml
+    -   PHP7.4-mbstring
+-   [Composer](https://getcomposer.org/download/)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## 💻 Padronização de código
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+-   [Eslint](https://eslint.org/)
+-   [Prettier](https://prettier.io/)
+-   [EditorConfig](https://editorconfig.org/)
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+## 🚀 Executando o projeto
+### 1. Abra o terminal e clone o projeto para sua máquina
+```bash
+https://github.com/gabrielomena/livrariaicct.git
+```
+### 2. Entre na pasta do projeto
+```bash
+cd livrariaicct
+```
+### 3. Baixe as dependências com composer
+```bash
+composer install
+```
+### 4. Instale os componentes do package.json
+```bash
+npm install && npm run dev
+```
+### 5. Copie o arquivo .env.example e renomeie para .env
+```bash
+cp .env.exemple .env
+```
+### 5. Crie uma tabela no banco de dados com o nome incubatech e altere no .env as configurações conforme seu banco
+```bash
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=livraria //altere aqui conforme seu banco de dados
+DB_USERNAME=root //user name do seu banco de dados
+DB_PASSWORD=root //password para acessar seu banco de dados
+```
 
-## Contributing
+### 6. Gere uma chave de criptografia para o código
+```bash
+php artisan key:generate
+```
+### 7. Rode as migrations para gerar as tabelas no banco
+```bash
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ✅ Features Desenvolvidas
 
-## Code of Conduct
+-   [x] API RESTful
+-   [x] Listar Livros
+-   [x] Cadastrar Livros
+-   [x] Editar Livros
+-   [x] Buscar Livros
+-   [x] Excluir Livros
+-   [x] Listar Autores
+-   [x] Cadastrar Autor
+-   [x] Editar Autor
+-   [x] Buscar Autor
+-   [x] Excluir Autor
+-   [X] Autenticação de usuário.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
