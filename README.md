@@ -67,7 +67,7 @@ npm install && npm run dev
 ```bash
 cp .env.exemple .env
 ```
-### 5. Crie uma tabela no banco de dados com o nome incubatech e altere no .env as configurações conforme seu banco
+### 5. Crie uma tabela no banco de dados com o nome livraria e altere no .env as configurações conforme seu banco
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=mysql
