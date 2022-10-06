@@ -18,7 +18,7 @@ class CreateLivrosTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('isbn')->nullable();
-            $table->foreignId('autor_id')->constrained('autores');
+            $table->foreignId('autor_id')->nullable()->constrained('autores')->onDelete('cascade');
             $table->timestamps();
         });
     }

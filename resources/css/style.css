@@ -1,0 +1,15 @@
+.dataTables_length select {
+    width: 65px;
+}
+.dataTables_filter input {
+    border-radius: 10px !important;
+}
+.odd{
+    border-bottom: 10px !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+    border-radius: 15px;
+}
+.material-icons {
+    font-size: 18px !important;
+}

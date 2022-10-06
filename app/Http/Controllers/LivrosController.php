@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Livros;
-use App\Services\ApiServices;
+use App\Services\Livro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Inertia\Inertia;
@@ -17,10 +17,7 @@ class LivrosController extends Controller
      */
     public function index()
     {
-        $autores = ApiServices::getAutores();
-        $livros = ApiServices::getLivros();
-
-        return Inertia::render('Livros/Index', ['livros' => $livros]);
+       //
     }
 
     /**
@@ -41,7 +38,9 @@ class LivrosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $livro = Livros::create($request->all());
+        Livro::storeLivro($livro);
+        return redirect()->route('dashboard.index')->with('success', "Livro cadastrado com sucesso");
     }
 
     /**
@@ -75,7 +74,14 @@ class LivrosController extends Controller
      */
     public function update(Request $request, Livros $livros)
     {
-        //
+        $livros->update([
+            'titulo' => $request->titulo,
+            'isbn' => $request->isbn,
+            'autor_id' => $request->autor_id
+        ]);
+        Livro::editLivro($request);
+
+        return redirect()->route('dashboard.index')->with('success', "Autor atualizado com sucesso");
     }
 
     /**
@@ -86,6 +92,8 @@ class LivrosController extends Controller
      */
     public function destroy(Livros $livros)
     {
-        //
+        Livro::deleteLivro($livros);
+        $livros->delete();
+       return redirect()->route('dashboard.index')->with('success', "Livro deletado com sucesso");
     }
 }

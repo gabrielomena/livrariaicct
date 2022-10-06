@@ -10,4 +10,9 @@ class Livros extends Model
     use HasFactory;
     protected $table = "livros";
     protected $guarded = ['id'];
+
+    public function autor()
+    {
+        return $this->belongsTo(Autores::class);
+    }
 }

@@ -3,3 +3,4 @@
 @import 'tailwindcss/utilities';
 @import 'animate.css';
 @import 'sweetalert2/dist/sweetalert2.min.css';
+@import '../css/style.css';

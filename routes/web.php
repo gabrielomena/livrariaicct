@@ -28,6 +28,12 @@ Route::redirect('/','/dashboard');
 Route::group(['middleware'=>['auth:sanctum','verified']], function () {
     Route::resource('/dashboard', DashboardController::class);
     Route::resource('/livros', LivrosController::class);
+    Route::delete('/livros/deletar/{livros}',[LivrosController::class, 'destroy'])->name('deletar-livro');
+    Route::post('/livros/atualizar/{livros}',[LivrosController::class, 'update'])->name('atualizar-livro');
+
     Route::resource('/autores', AutoresController::class);
+    Route::post('/autores/atualizar/{autores}',[AutoresController::class, 'update'])->name('atualizar-autor');
+    Route::delete('/autores/deletar/{autores}',[AutoresController::class, 'destroy'])->name('deletar-autor');
+
 });
 

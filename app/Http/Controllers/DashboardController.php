@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Livro;
 use Inertia\Inertia;
 
 class DashboardController extends Controller
@@ -14,8 +15,9 @@ class DashboardController extends Controller
     public function index()
     {
         $usuario = auth()->user();
-
-        return Inertia::render('Dashboard', ['usuario' => $usuario,]);
+        $autores = Livro::getAutores();
+        $livros = Livro::getLivros();
+        return Inertia::render('Dashboard', ['usuario' => $usuario,'autores' => $autores, 'livros' => $livros]);
     }
 
 }

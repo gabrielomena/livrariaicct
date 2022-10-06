@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Autores;
+use App\Services\Livro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Inertia\Inertia;
 
 class AutoresController extends Controller
 {
@@ -14,7 +17,8 @@ class AutoresController extends Controller
      */
     public function index()
     {
-        //
+        $autores = Livro::getAutores();
+        return Inertia::render('Autores/Index', ['autores' => $autores]);
     }
 
     /**
@@ -35,7 +39,9 @@ class AutoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $autor = Autores::create($request->all());
+        Livro::storeAutor($autor);
+        return redirect()->route('dashboard.index')->with('success', "Autor cadastrado com sucesso");
     }
 
     /**
@@ -69,7 +75,13 @@ class AutoresController extends Controller
      */
     public function update(Request $request, Autores $autores)
     {
-        //
+        $autores->update([
+            'primeiro_nome' => $request->primeiro_nome,
+            'ultimo_nome' => $request->ultimo_nome
+        ]);
+        Livro::editAutor($request);
+
+        return redirect()->route('dashboard.index')->with('success', "Autor atualizado com sucesso");
     }
 
     /**
@@ -80,6 +92,8 @@ class AutoresController extends Controller
      */
     public function destroy(Autores $autores)
     {
-        //
+       Livro::deleteAutor($autores);
+       $autores->delete();
+       return redirect()->route('dashboard.index')->with('success', "Autor deletado com sucesso");
     }
 }
