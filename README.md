@@ -85,7 +85,7 @@ php artisan key:generate
 ```bash
 php artisan migrate
 ```
-## CASO PREFIRA PODE ACESSAR O SISTEMA EM PRODUÇÃO EM:
+## CASO PREFIRA PODE ACESSAR O SISTEMA EM PRODUÇÃO:
 [CLIQUE AQUI PARA VISUALIZAR EM PRODUÇÃO](https://livraria.gabrielomena.com.br)
 Login: 12345678910
 Senha: 123456789
