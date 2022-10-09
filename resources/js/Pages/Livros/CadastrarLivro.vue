@@ -68,7 +68,7 @@ export default {
           onSuccess: () => {
             Swal.fire({
               icon: "success",
-              title: "Autor cadastrado com sucesso!",
+              title: "Livro cadastrado com sucesso!",
               showConfirmButton: false,
             });
             location.reload(true);
@@ -76,7 +76,7 @@ export default {
           onError: () => {
             Swal.fire({
               icon: "error",
-              title: "Erro ao cadastrar categoria",
+              title: "Erro ao cadastrar livro",
               showConfirmButton: false,
             });
           },
