@@ -72,7 +72,7 @@ export default {
           onError: () => {
             Swal.fire({
               icon: "error",
-              title: "Erro ao cadastrar categoria",
+              title: "Erro ao cadastrar autor",
               showConfirmButton: false,
             });
           },
