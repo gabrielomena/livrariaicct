@@ -93,16 +93,10 @@ Senha: 123456789
 ## ✅ Features Desenvolvidas
 
 -   [x] API RESTful
--   [x] Listar Livros
--   [x] Cadastrar Livros
--   [x] Editar Livros
--   [x] Buscar Livros
--   [x] Excluir Livros
--   [x] Listar Autores
--   [x] Cadastrar Autor
--   [x] Editar Autor
--   [x] Buscar Autor
--   [x] Excluir Autor
--   [X] Autenticação de usuário.
+-   [x] Listar produtos
+-   [x] Cadastrar produto
+-   [x] Editar produto
+-   [x] Filtrar por categoria
+-   [x] Excluir produto
 
 
